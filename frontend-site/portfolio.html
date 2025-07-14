@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aryan Kumar | Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+
+:root {
+      --primary: #00e5ff;
+      --accent: #ffd600;
+      --bg-dark: #121212;
+      --bg-light: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.05);
+      --text-light: #f5f5f5;
+      --text-dark: #111;
+      --text-muted-light: #555;
+      --text-muted-dark: #ccc;
+      --radius: 12px;
+    }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    body.dark .skill-card ul,
+    body.dark .cert-card ul,
+    body.dark .project p,
+    body.dark .header-subtext p,
+    body.dark .back-to-top,
+    body.dark .social-contact p,
+    body.dark #typing-text {
+      color: var(--text-muted-dark);
+    }
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+    body.light .skill-card ul,
+    body.light .cert-card ul,
+    body.light .project p,
+    body.light .header-subtext p,
+    body.light .back-to-top,
+    body.light .social-contact p,
+    body.light #typing-text {
+      color: var(--text-muted-light);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: all 0.3s ease;
+      scroll-behavior: smooth;
+    }
+    /* :root {
+      --primary: #00e5ff;
+      --accent: #ffd600;
+      --bg-dark: #121212;
+      --bg-light: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.05);
+      --text-light: #f5f5f5;
+      --text-dark: #111;
+      --text-muted: #ccc;
+      --radius: 12px;
+    }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: all 0.3s ease;
+      scroll-behavior: smooth;
+    } */
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: linear-gradient(135deg, #101820, #000000);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-top: 15px;
+      color: var(--primary);
+    }
+    #typing-text {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 10px;
+      height: 1.5rem;
+      text-align: center;
+    }
+    .header-subtext {
+      margin-top: 20px;
+    }
+    .header-subtext a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .download-cv {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: #000;
+      font-weight: bold;
+      border-radius: var(--radius);
+      text-decoration: none;
+    }
+    .download-cv:hover {
+      background-color: #ffe92e;
+    }
+    .toggle-theme {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: var(--accent);
+      border: none;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 999;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 30px;
+    }
+   /* for phone horizontal line niche */
+   nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 30px;
+    padding: 0;
+    flex-direction: row !important;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: var(--primary);
+    padding: 8px 16px;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  nav ul li a:hover {
+    background-color: var(--primary);
+    color: #000;
+  }
+
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: row !important;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 5px 8px;
+    }
+
+    nav ul li a {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  }
+    /* for phone horizontal line upar */
+    nav ul li a {
+      color: var(--primary);
+      padding: 8px 16px;
+      border: 1px solid var(--primary);
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: var(--primary);
+      color: #000;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: var(--bg-glass);
+      border-left: 4px solid var(--primary);
+      padding: 20px;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+    .project:hover {
+      transform: scale(1.03);
+    }
+    .project a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* ====== */
+    nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 30px;
+    padding: 0;
+    flex-direction: row !important;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: var(--primary);
+    padding: 8px 16px;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  nav ul li a:hover {
+    background-color: var(--primary);
+    color: #000;
+  }
+
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: row !important;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 5px 8px;
+    }
+
+    nav ul li a {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .skill-card, .cert-card {
+    background: var(--bg-glass);
+    border-radius: var(--radius);
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+
+  .skill-card:hover, .cert-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-card h3, .cert-card h3 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .skill-card ul, .cert-card ul {
+    list-style: none;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .skill-card ul li::before, .cert-card ul li::before {
+    content: "✔️ ";
+    margin-right: 5px;
+  }
+
+    /* -------- */
+    .skill-bar {
+      margin: 10px 0;
+    }
+    .bar {
+      height: 12px;
+      background: #333;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .bar > div {
+      height: 100%;
+      background: var(--primary);
+      text-align: right;
+      padding-right: 5px;
+      color: #000;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #0e0e0e;
+      color: var(--text-muted);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer a {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .back-to-top {
+      margin-top: 15px;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .header-subtext {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+<body class="dark">
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Toggle Theme</button>
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/140536461?v=4" alt="Aryan Kumar" class="profile-pic" />
+    <h1 data-aos="fade-down">Aryan Kumar</h1>
+    <p id="typing-text"></p>
+    <div class="header-subtext" data-aos="fade-up" data-aos-delay="200">
+      <p>📍 Bihar, India</p>
+      <p>🎓 B.Tech CSE @ CIT Kokrajhar (Lateral Entry)</p>
+      <p>💼 Former Assistant Customer Executive @ iEnergizer</p>
+      <p>
+        🌐 <a href="https://linkedin.com/in/aryan-kumar-910887234" target="_blank">LinkedIn</a> |
+        🐙 <a href="https://github.com/aryangipr" target="_blank">GitHub</a> |
+        📸 <a href="https://instagram.com/imchatgptyt" target="_blank">@imchatgptyt</a>
+      </p>
+      <p>📧 Email: <a href="mailto:chatgpt.with.attitude@gmail.com">chatgpt.with.attitude@gmail.com</a></p>
+    </div>
+    <a class="download-cv" href="./Aryan_Kumar_Resume.pdf" download>📄 Download CV</a>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m Aryan Kumar — a builder by heart. I started from hardware, exploring laptop repairs, BIOS configs, and network setups. Today, I develop smart full-stack web apps and AI-driven tools. Currently pursuing B.Tech in CSE at CIT Kokrajhar (lateral), I’m combining practical knowledge with engineering depth. I also love teaching, content creation, and simplifying complex tech for others.</p>
+  </section>
+
+
+   <!-- new section of skilss  -->
+
+   
+  <section id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Languages</h3>
+      <ul>
+        <li>C, C++</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML5, CSS3</li>
+        <li>DOM Manipulation</li>
+        <li>TailwindCSS</li>
+        <li>React</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Backend</h3>
+      <ul>
+        <li>Node.js, Express.js</li>
+        <li>Firebase (Auth, Firestore, Functions)</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li>Git, GitHub</li>
+        <li>VS Code, Postman</li>
+        <li>Figma (UI Mockups)</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>API & Integrations</h3>
+      <ul>
+        <li>OpenAI (ChatGPT)</li>
+        <li>Claude (via OpenRouter)</li>
+        <li>Razorpay Payment Gateway</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>System Skills</h3>
+      <ul>
+        <li>BIOS & Hardware Config</li>
+        <li>RAM/SSD Replacement</li>
+        <li>Basic Networking</li>
+        <li>Ethical Hacking Fundamentals</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" data-aos="fade-up">
+  <h2>Certifications</h2>
+  <div class="skills-grid">
+    <div class="cert-card">
+      <h3>Google Certification</h3>
+      <ul>
+        <li>Site Reliability Engineering (SRE)</li>
+      </ul>
+    </div>
+    <div class="cert-card">
+      <h3>AI & Chatbot</h3>
+      <ul>
+        <li>Chatbot Builder – OpenAI & Claude</li>
+        <li>Prompt Engineering Basics</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- <section id="skills" data-aos="fade-up">
+    <h2>Skills & Certifications</h2>
+    <div class="skill-bar"><label>Languages: C, C++, Python, JavaScript</label><div class="bar"><div style="width: 90%;">90%</div></div></div>
+    <div class="skill-bar"><label>Frontend: HTML5, CSS3, DOM, TailwindCSS, React</label><div class="bar"><div style="width: 85%;">85%</div></div></div>
+    <div class="skill-bar"><label>Backend: Node.js, Express.js, Firebase</label><div class="bar"><div style="width: 80%;">80%</div></div></div>
+    <div class="skill-bar"><label>Tools: Git, GitHub, VS Code, Postman</label><div class="bar"><div style="width: 85%;">85%</div></div></div>
+    <div class="skill-bar"><label>APIs: OpenAI, Razorpay, Claude</label><div class="bar"><div style="width: 75%;">75%</div></div></div>
+    <div class="skill-bar"><label>Certifications: Google SRE, Chatbot Builder</label><div class="bar"><div style="width: 70%;">70%</div></div></div>
+    <div class="skill-bar"><label>System Skills: BIOS, RAM/SSD, Hacking Basics</label><div class="bar"><div style="width: 85%;">85%</div></div></div>
+  </section> -->
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project"><h3>AI Chat App</h3><p>ChatGPT-like app using Claude via OpenRouter, Node.js, and Firebase.</p><a href="https://github.com/aryangipr/chat-app" target="_blank">GitHub</a></div>
+      <div class="project"><h3>Anonymous Data Seller</h3><p>Buy data without login; integrates Razorpay & email delivery.</p><a href="https://github.com/aryangipr/anon-data-seller" target="_blank">GitHub</a></div>
+      <div class="project"><h3>Service Hiring Platform</h3><p>Firebase-based full-stack platform for secure service listings.</p><a href="https://github.com/aryangipr/service-hiring" target="_blank">GitHub</a></div>
+      <div class="project"><h3>I'm ChatGPT - YouTube Brand</h3><p>Scripts, thumbnails, channel launch and branding assets.</p><a href="https://www.youtube.com/@imchatgptyt" target="_blank">YouTube</a></div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <div class="social-contact" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--bg-glass);
+      padding: 40px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    ">
+      <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px;">
+        Feel free to connect with me on any of these platforms. I'm always open to new opportunities, ideas, or just a friendly tech chat!
+      </p>
+      <div class="social-icons" style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      ">
+        <a href="mailto:chatgpt.with.attitude@gmail.com" style="color: var(--primary); font-size: 1.1rem; font-weight: bold; text-decoration: none;">📧 Email</a>
+        <a href="https://linkedin.com/in/aryangipr" target="_blank" style="color: var(--primary); font-size: 1.1rem; font-weight: bold; text-decoration: none;">🔗 LinkedIn</a>
+        <a href="https://github.com/aryangipr" target="_blank" style="color: var(--primary); font-size: 1.1rem; font-weight: bold; text-decoration: none;">🐙 GitHub</a>
+        <a href="https://instagram.com/imchatgptyt" target="_blank" style="color: var(--primary); font-size: 1.1rem; font-weight: bold; text-decoration: none;">📸 Instagram</a>
+        <a href="https://wa.me/919060507697" target="_blank" style="color: var(--primary); font-size: 1.1rem; font-weight: bold; text-decoration: none;">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>Made with 💻 by Aryan Kumar</p>
+    <p>“Break things. Understand why. Build better.”</p>
+    <a href="#top" class="back-to-top">🔝 Back to Top</a>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
+    }
+
+    const text = "AI Chat Developer • Full-Stack Engineer • System & Hardware Enthusiast";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50);
+      }
+    }
+    type();
+  </script>
+</body>
+</html>
